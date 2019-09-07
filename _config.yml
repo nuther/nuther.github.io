@@ -3,17 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
+title: nuther's blog
+favicon: https://img.vim-cn.com/a9/943bb4f59bc8d98dc703a138195fb426231013.png
+avatar: https://img.vim-cn.com/53/19accd50eb0cc89e0c3660906ae53fd4b661cb.jpg
+subtitle: 记录生活
+description: 
 keywords:
-author: John Doe
-language: en
-timezone:
+author: nuther
+language: zh_CN
+timezone: UTC
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://github.com/nuther/nuther.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -73,7 +75,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: material-x
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
