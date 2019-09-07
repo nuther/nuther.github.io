@@ -4,13 +4,90 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2019/09/06/hello-world/"/>
-      <url>/2019/09/06/hello-world/</url>
+      <title>GoSession</title>
+      <link href="/2019/09/07/GoSession/"/>
+      <url>/2019/09/07/GoSession/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="session创建过程"><a href="#session创建过程" class="headerlink" title="session创建过程"></a>session创建过程</h2><pre><code>session 基本原理： 服务器为每个会话维护一份信息数据，客户端和服务器依靠一个全局唯一的标识符来访问这份数据，以达到交互的目的；这个过程可以概括为三个步骤：1. 生成全局唯一标识符(sessionid)2. 开辟数据存储空间3. 将全局唯一标识符发送给客户端。（cookie 和 URL 重写）</code></pre><h2 id="session管理"><a href="#session管理" class="headerlink" title="session管理"></a>session管理</h2><pre><code>session管理涉及到一下几个因素：* 全局session管理器;* 保证sessionid的全局唯一性;* 为每个客户关联一个sessino;* session的存储；* session过期处理；</code></pre>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> Go </tag>
+            
+            <tag> session </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HtmlStudy</title>
+      <link href="/2019/09/07/HtmlStudy/"/>
+      <url>/2019/09/07/HtmlStudy/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-常用的标签"><a href="#1-常用的标签" class="headerlink" title="1. 常用的标签"></a>1. 常用的标签</h2><pre><code>&lt;html&gt; &lt;body&gt; &lt;title&gt; &lt;meta&gt; &lt;body&gt; 每个html文本都要有&lt;p&gt;  &lt;h1&gt;..&lt;h6&gt; &lt;hr&gt; &lt;br&gt; 段落，标题，分割线，换行&lt;a href=&quot;link-url&quot;&gt;描述&lt;/a&gt;</code></pre><h2 id="2-其他标签"><a href="#2-其他标签" class="headerlink" title="2. 其他标签"></a>2. 其他标签</h2><pre><code>&lt;b&gt; &lt;i&gt; 加粗 ，斜体&lt;strong&gt; &lt;em&gt; 重要文本 和上边两个标签视觉效果相似&lt;a href=&quot;httpUrl&quot; target=&quot;_blank&quot;&gt;描述&lt;/a&gt;</code></pre><h2 id="3-HTML-CSS"><a href="#3-HTML-CSS" class="headerlink" title="3.HTML CSS"></a>3.HTML CSS</h2><ul><li>内联样式：在HTML属性内使用</li></ul><p><code>&lt;p style=&quot;color:blue;margin-left:20px;&quot;&gt;这是一个段落。&lt;/p&gt;</code></p><ul><li><p>内部样式表： 在<code>&lt;head&gt;</code>区域使用<code>&lt;style&gt;</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">body &#123;background-color:yellow;&#125;        </span><br><span class="line">p &#123;color:blue;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></li><li><p>外部引用： 使用外部CSS文件 使用<code>&lt;link&gt;</code> 标签</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;link ref=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;mystyle.css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></li></ul><h2 id="4-元素标签"><a href="#4-元素标签" class="headerlink" title="4.元素标签"></a>4.元素标签</h2><h3 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h3><p><code>&lt;img src=&quot;image-url&quot; alt=&quot;description&quot; width=&quot;100&quot; height=&quot;200&quot;&gt;</code></p><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;table border=&quot;1&quot;&gt;</span><br><span class="line">&lt;tr&gt;</span><br><span class="line">    &lt;td&gt;first row,first cell&lt;/td&gt;</span><br><span class="line">    &lt;td&gt;first row,second cell&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure><h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><ul><li>有序列表</li></ul><p><code>&lt;ol&gt;&lt;li&gt;the context of ol&lt;/li&gt;&lt;/ol&gt;</code></p><ul><li>无序列表</li></ul><p><code>&lt;ul&gt;&lt;li&gt;the context of ul&lt;/li&gt;&lt;/ul&gt;</code></p><ul><li>自定义列表</li></ul><p><code>&lt;dl&gt;&lt;dt&gt;the context of dl&lt;/dt&gt;&lt;dd&gt;description of dt&lt;/dd&gt;&lt;/dl&gt;</code></p><h3 id="区块"><a href="#区块" class="headerlink" title="区块"></a>区块</h3><blockquote><p>大多数HTML元素被定义为<strong>块级元素</strong>和<strong>内联元素</strong>,块级元素在显示时，通常会以新行开始和结束,而内联元素不会以新行开始</p></blockquote><ul><li><code>&lt;div&gt; 是块级元素，它可用于组合其他HTML 的容器</code></li><li><code>&lt;span&gt; 是内联元素，可用作文本的容器</code></li></ul><h3 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h3><blockquote><p>表单是一个包含表单元素的区域，表单元素是指允许用户在表单元素中输入内容，比如:      <strong>textarea(文本域), radio-buttons(单选框), checkbox(多选框), select(下拉列表)</strong></p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;form name=&quot;input&quot; action=&quot;html_from_action.php&quot; mothod=&quot;get&quot;&gt;</span><br><span class="line">Username:&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;</span><br><span class="line">Password:&lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;</span><br><span class="line">&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;male&quot;&gt;Male&lt;br&gt;</span><br><span class="line">&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;female&quot;&gt;Female&lt;br&gt;</span><br><span class="line">&lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;Bike&quot;&gt;Bike&lt;br&gt;</span><br><span class="line">&lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;Car&quot;&gt;Car&lt;br&gt;</span><br><span class="line">&lt;select name=&quot;cars&quot;&gt;</span><br><span class="line">&lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;jik&quot;&gt;Jik&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure><h3 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h3><blockquote><p>定义一个内联的<strong>iframe</strong></p></blockquote><p><code>&lt;iframe src=&quot;url&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</code></p><h3 id="HTML-脚本"><a href="#HTML-脚本" class="headerlink" title="HTML 脚本"></a>HTML 脚本</h3><p><code>&lt;script&gt;document.write(&quot;hello world!&quot;)&lt;/script&gt;</code></p><h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> language </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+            <tag> study </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LinuxStudy</title>
+      <link href="/2019/09/07/LinuxStudy/"/>
+      <url>/2019/09/07/LinuxStudy/</url>
+      
+        <content type="html"><![CDATA[<h2 id="linux系统启动过程"><a href="#linux系统启动过程" class="headerlink" title="linux系统启动过程"></a>linux系统启动过程</h2><pre><code>linux 系统的启动过程可以分为5个阶段：* 内核的引导* 运行init* 系统初始化* 建立终端* 用户系统登录</code></pre><h2 id="linux-常用命令"><a href="#linux-常用命令" class="headerlink" title="linux 常用命令"></a>linux 常用命令</h2><h3 id="目录类"><a href="#目录类" class="headerlink" title="目录类:"></a>目录类:</h3><pre><code>1. ls 列出当前目录下的所有文件夹    * ls -a 包括隐藏文件    * ls -l 列出文件权限    * ls -la al组合    * ls -lh 常用，易读方式列出文件    * ls -lS 按文件大小降序排序2. cd 改变工作目录3. mkdir 创建目录4. rmdir 删除空目录5. cp 复制文件6. mv 移动文件7. du 显示文件使用的磁盘空间量8. rm 删除文件或目录（不管是否为空）9. tree 显示目录数的树状图表10. file 显示文件的类型11. chmod 更改文件或目录的文件权限    * ugo : user, group,other 分别表示当前用户，组用户，其他用户    * +-： 增加，删除权限    * rwx: read,write,execute 读写，执行权限    * 对应数字： r:4 w:2 x:1    * d: 文件夹     * -： 文件    * drwxr-xr-x : 此文件夹对于当前用户具有全部权限，组用户和其他用户只可读和可执行，                       无法写入12. pwd 显示当前路径</code></pre><h3 id="构建块"><a href="#构建块" class="headerlink" title="构建块:"></a>构建块:</h3><pre><code>1. cat  以文本方式显示文件 （tac 倒着显示）2. touch 文件存在刷新时间戳，不存在则创建文件和时间戳3. alias 创建/显示别名 （unalias 删除别名）4. echo 将数据写到标准输出，一般可以配合管道命令写入到文件中5. less/more 分屏显示数据6. head/tail 从数据的开头/末尾选择行</code></pre><h3 id="工具类："><a href="#工具类：" class="headerlink" title="工具类："></a>工具类：</h3><pre><code>1. man 查看命令的帮助2. --help 与 man 作用相同    3. tldr too long don&apos;t read工具4. whatis 查看命令的介绍5. whereis 命令所在位置6. find 用法： find ToFindLocation -name FileName7. grep 用法： grep [-l -v] &quot;findString&quot; ToFindPath</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> study </tag>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Goweb</title>
+      <link href="/2019/09/07/Goweb/"/>
+      <url>/2019/09/07/Goweb/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Web-工作方式的几个概念"><a href="#Web-工作方式的几个概念" class="headerlink" title="Web 工作方式的几个概念"></a>Web 工作方式的几个概念</h2><pre><code>Request： 用户请求的信息，包括post,get,cookie,url 等信息Reponse： 服务器返回给客户端的信息Conn：    用户的每次请求链接Handler： 处理请求和生成返回信息的处理逻辑</code></pre><h2 id="Go-Web工作流程"><a href="#Go-Web工作流程" class="headerlink" title="Go Web工作流程"></a>Go Web工作流程</h2><pre><code>1. 创建Listen Socket，监听指定的端口，等待客户端请求到来2. Listen Socket接受客户端的请求，得到Client Socket，通过Client Socket 与客户端通信3. 处理客户端的请求，首先从Client Socket 读取HTTP 请求的协议头，根据方法转交给相应的Handler 处理，Handler 处理完毕后将处理结果通过Client Socket 写给客户端</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Go </tag>
+            
+            <tag> Web </tag>
+            
+        </tags>
       
     </entry>
     
